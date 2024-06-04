@@ -3,7 +3,7 @@
   font-family: 'Roboto', sans-serif;
 }
 html {
-  background: #f3c14f;
+  background: #2a78c1;
 }
 .App {
   display: flex;
@@ -17,11 +17,13 @@ html {
   justify-content: space-between;
   padding: 1rem;
   margin-bottom: 1rem;
-  background: #fff;
+  background: #89d9df;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
   align-items: center;
 }
 .App .title-row .title {
-  color: #4c4c4c;
+  color: #e3efed;
   font-size: 4rem;
 }
 .App .main {
