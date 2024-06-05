@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import FirebaseAuthService from './FirebaseAuthService';
 
+// eslint-disable-next-line no-unused-vars
 import LoginForm from './components/LoginForm';
 
 // import logo from './logo.svg';
@@ -18,6 +19,7 @@ import './App.css';
 
 function App() {
   // standard setting as string
+  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState(null);
 
   // When firebase detects a change of the auth, the setUser function is passed on
@@ -30,7 +32,7 @@ function App() {
       <h1>probe for heading</h1>
       <div className="title-row">
         <h1 className="title">Cloc IN</h1>
-        <LoginForm existingUser={user}></LoginForm>
+        {/* <LoginForm existingUser={user}></LoginForm> */}
       </div>
     </div>
     // <div className="App">
