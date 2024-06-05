@@ -1,7 +1,7 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 // import FirebaseAuthService from './FirebaseAuthService';
 
-// import LoginForm from './components/LoginForm';
+import LoginForm from './components/LoginForm';
 
 // import logo from './logo.svg';
 import './App.css';
@@ -18,7 +18,8 @@ import './App.css';
 
 function App() {
   // standard setting as string
-  // const [user, setUser] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+  const [user, setUser] = useState('its me');
 
   // When firebase detects a change of the auth, the setUser function is passed on
   // into the subscribeToAuthChanges(function) => in there the auth.onAuthStateChanged()
@@ -30,7 +31,7 @@ function App() {
       <h1>probe for heading</h1>
       <div className="title-row">
         <h1 className="title">Firebase recipes</h1>
-        {/* <LoginForm existingUser={user}></LoginForm> */}
+        <LoginForm existingUser={user}></LoginForm>
       </div>
     </div>
     // <div className="App">
