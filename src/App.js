@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import FirebaseAuthService from './FirebaseAuthService';
+// import { useState } from 'react';
+// import FirebaseAuthService from './FirebaseAuthService';
 
-// eslint-disable-next-line no-unused-vars
-import LoginForm from './components/LoginForm';
+// import LoginForm from './components/LoginForm';
 
 // import logo from './logo.svg';
 import './App.css';
@@ -19,19 +18,18 @@ import './App.css';
 
 function App() {
   // standard setting as string
-  // eslint-disable-next-line no-unused-vars
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
   // When firebase detects a change of the auth, the setUser function is passed on
   // into the subscribeToAuthChanges(function) => in there the auth.onAuthStateChanged()
   // is executed inwhere the setUser(user) is passed on and also executed.
-  FirebaseAuthService.subscribeToAuthChanges(setUser);
+  // FirebaseAuthService.subscribeToAuthChanges(setUser);
 
   return (
     <div className="App">
       <h1>probe for heading</h1>
       <div className="title-row">
-        <h1 className="title">Cloc IN</h1>
+        <h1 className="title">Firebase recipes</h1>
         {/* <LoginForm existingUser={user}></LoginForm> */}
       </div>
     </div>
