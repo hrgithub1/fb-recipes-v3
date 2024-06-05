@@ -27,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>probe for heading</h1>
       <div className="title-row">
         <h1 className="title">Cloc IN</h1>
         <LoginForm existingUser={user}></LoginForm>
