@@ -7,24 +7,32 @@ permissions:
   checks: write
   contents: read
   pull-requests: write
+# env:
+#   REACT_APP_API_KEY: 'AIzaSyC1DQLP7Glf2b1tWj4Avcd4klNnOiTWoLI'
+#   REACT_APP_AUTH_DOMAIN: 'fir-rcps.firebaseapp.com'
+#   REACT_APP_PROJECT_ID: 'fir-rcps'
+#   REACT_APP_STORAGE_BUCKET: 'fir-rcps.appspot.com'
+#   REACT_APP_MESSAGING_SENDER_ID: '146390546042'
+#   REACT_APP_APP_ID: '1:146390546042:web:7d81aee4af4556674b6dc3'
+#   REACT_APP_MEASUREMENT_ID: 'G-XM03YXND48'
 jobs:
   build_and_preview:
     if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
     env:
-      REACT_APP_API_KEY: '${{ secrets.REACT_APP_API_KEY }}'
-      REACT_APP_AUTH_DOMAIN: '${{ secrets.REACT_APP_AUTH_DOMAIN }}'
-      REACT_APP_PROJECT_ID: '${{ secrets.REACT_APP_PROJECT_ID }}'
-      REACT_APP_STORAGE_BUCKET: '${{ secrets.REACT_APP_STORAGE_BUCKET }}'
-      REACT_APP_MESSAGING_SENDER_ID: '${{ secrets.REACT_APP_MESSAGING_SENDER_ID }}'
-      REACT_APP_APP_ID: '${{ secrets.REACT_APP_APP_ID }}'
-      REACT_APP_MEASUREMENT_ID: '${{ secrets.REACT_APP_MEASUREMENT_ID }}'
+      REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+      REACT_APP_AUTH_DOMAIN: ${{ secrets.REACT_APP_AUTH_DOMAIN }}
+      REACT_APP_PROJECT_ID: ${{ secrets.REACT_APP_PROJECT_ID }}
+      REACT_APP_STORAGE_BUCKET: ${{ secrets.REACT_APP_STORAGE_BUCKET }}
+      REACT_APP_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_MESSAGING_SENDER_ID }}
+      REACT_APP_APP_ID: ${{ secrets.REACT_APP_APP_ID }}
+      REACT_APP_MEASUREMENT_ID: ${{ secrets.REACT_APP_MEASUREMENT_ID }}
     steps:
       - uses: actions/checkout@v4
       - run: npm install
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIR_RCPS }}'
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIR_RCPS }}
           projectId: fir-rcps
