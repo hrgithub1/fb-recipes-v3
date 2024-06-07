@@ -75,9 +75,7 @@ function LoginForm({ existingUser }) {
       {existingUser ? (
         <div className="row">
           {/* next variable should be the actual name */}
-          {/* <h3>Welcome, {existingUser.email}</h3> */}
-
-          <h3>Welcome, user</h3>
+          <h3>Welcome, {existingUser.email}</h3>
           <button
             type="button"
             className="primary-button"
